@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        canvas {
+            margin-bottom: 20px;
+            border: 2px solid #ffffff;
+            background-color: #444;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        .word-display, .message {
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+    <div class="word-display" id="wordDisplay">_ _ _ _ _ _ _</div>
+    <div class="controls">
+        <input type="text" id="guessInput" placeholder="Enter a letter" maxlength="1">
+        <button onclick="makeGuess()">Guess</button>
+    </div>
+    <div class="message" id="messageDisplay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
